@@ -1,0 +1,26 @@
+{
+  "name": "humana",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require-module ts-node/register --require src/hooks/hooks.ts --require src/test/steps/*.ts --format json:test-results/cucumber.json",
+    "report": "ts-node /Users/siri/Desktop/Humana/src/utils/report.ts && open test-results/reports/index.html",
+    "test:record": "npx playwright codegen",
+    "htmlreport": "open test-results/reports/cucumber_report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.2",
+    "cucumber-html-reporter": "^7.1.1",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "winston": "^3.13.0"
+  }
+}

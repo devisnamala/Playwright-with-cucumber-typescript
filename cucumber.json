@@ -1,0 +1,21 @@
+{
+    "default": {
+      "formatOptions": {
+        "snippetInterface": "async-await"
+      },
+      "paths": [
+        "src/test/features"
+      ],
+      "dryRun": false,
+      "require": [
+        "src/test/steps/login.ts", "src/hooks/hooks.ts"
+      ],
+      "requireModule": [
+        "ts-node/register"
+      ],
+      "format": [
+        "json:test-results/reports/cucumberresult.json"  
+      ]
+    }
+  }
+  
