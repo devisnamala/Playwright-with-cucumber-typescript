@@ -1,8 +1,10 @@
-import { Page } from "@playwright/test";
+// src/test/pageFixture.ts
+
+import { Page } from '@playwright/test';
 
 export const fixture = {
-    //@ts-ignore
-    page: undefined as Page,
-    screenshotPath: 'test-results/screenshots' as string,
-    videoPath: 'test-results/recordings' as string,
+    page: undefined as Page | undefined,
+    screenshotPath: 'test-results/screenshots/',
+    videoPath: 'test-results/recordings/',
+    tracePath: 'test-results/traces'
 };

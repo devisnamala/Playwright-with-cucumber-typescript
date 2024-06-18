@@ -1,5 +1,5 @@
 // LoginPage.ts
-import UIActions from "../utils/UIActions";
+import UIActions from "../helpers/uiActions";
 export class LoginPage {
     private Elements = {
         url: "https://www.saucedemo.com/v1/",
@@ -11,7 +11,6 @@ export class LoginPage {
     uiActions: UIActions;
 
     constructor(private page: import("@playwright/test").Page) {
-        // Initialize UIActions with the page instance
         this.uiActions = new UIActions(this.page);
     }
 

@@ -8,13 +8,33 @@
       ],
       "dryRun": false,
       "require": [
-        "src/test/steps/login.ts", "src/hooks/hooks.ts"
+        "src/hooks/hooks.ts", "src/test/api/steps/api.ts", "src/test/steps/login.ts", "src/test/steps/formy.ts"
       ],
       "requireModule": [
         "ts-node/register"
       ],
       "format": [
-        "json:test-results/reports/cucumberresult.json"  
+        "json:test-results/reports/cucumberresult.json",
+        "rerun:@rerun.txt"  
+      ],
+      "parallel":4,
+      "retries": 1,
+      "trace": "on-first-retry"
+    },
+    "rerun":{
+      "formatOptions": {
+        "snippetInterface": "async-await"
+      },
+      "dryRun": false,
+      "require": [
+        "src/hooks/hooks.ts", "src/test/api/steps/api.ts", "src/test/steps/login.ts", "src/test/steps/formy.ts"
+      ],
+      "requireModule": [
+        "ts-node/register"
+      ],
+      "format": [
+        "json:test-results/reports/cucumberresult.json",
+        "rerun:@rerun.txt"  
       ]
     }
   }

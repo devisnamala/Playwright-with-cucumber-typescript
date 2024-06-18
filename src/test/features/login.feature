@@ -1,5 +1,5 @@
 Feature: User Login
-
+@Login
 Scenario Outline: User successful Login
   Given User is on login page
   And User enters the username as "<username>" and password as "<password>"

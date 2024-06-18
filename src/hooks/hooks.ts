@@ -1,78 +1,100 @@
-import { BeforeAll, AfterAll, After, Status } from "@cucumber/cucumber";
-import { Browser, chromium, BrowserContext } from 'playwright';
+import { BeforeAll, After, AfterAll, Status } from "@cucumber/cucumber";
+import { Browser, BrowserContext } from 'playwright';
 import { fixture } from "./pageFixture";
-import fs from 'fs';
+import * as fs from 'fs';
 import * as path from 'path';
-import { exec } from "child_process";
+import { invokeBrowser } from "../utils/browsers"; // Adjusted import
 
 let browser: Browser;
 let context: BrowserContext;
 
 BeforeAll(async function () {
-    browser = await chromium.launch({ headless: true });
-    context = await browser.newContext({
-        recordVideo: {
-            dir: 'test-results/recordings'
-        }
-    });
-    fixture.page = await context.newPage(); 
-});
+    try {
+        browser = await invokeBrowser(); // Invoke desktop browser
+        context = await browser.newContext({
+            recordVideo: {
+                dir: 'test-results/recordings'
+            },
+        });
+        
+        // Start tracing
+        await context.tracing.start({ screenshots: true, snapshots: true });
 
-AfterAll(async function () {
-    await context.close();  
-    await browser.close(); 
-
-    // Execute cleanup script 
-    const cleanupScript = path.join(__dirname, '../utils/cleanup.ts');  
-    exec(`ts-node ${cleanupScript}`, (err, stdout, stderr) => {
-        if (err) {
-            console.error(`Error executing cleanup script: ${err}`);
-        }
-        if (stderr) {
-            console.error(`Cleanup script stderr: ${stderr}`);
-        }
-        console.log(`Cleanup script stdout: ${stdout}`);
-    });
+        fixture.page = await context.newPage(); // Create a new page in the context
+    } catch (error) {
+        console.error('Error in BeforeAll hook:', error);
+        throw error; // Ensure the test suite fails if BeforeAll hook fails
+    }
 });
 
 After(async function (scenario) {
     if (scenario.result?.status === Status.FAILED) {
         const screenshotPath = await takeScreenshot(scenario.pickle.name);
-        fixture.screenshotPath = screenshotPath;
-        this.attach(fs.readFileSync(screenshotPath), 'image/png');
+        if (screenshotPath) {
+            fixture.screenshotPath = screenshotPath;
+            this.attach(fs.readFileSync(screenshotPath), 'image/png');
+        }
 
         const videoPath = await getVideoPath();
         if (videoPath) {
             fixture.videoPath = videoPath;
             this.attach(fs.readFileSync(videoPath), 'video/webm');
         }
+
+        const tracePath = await stopAndSaveTrace(scenario.pickle.name);
+        if (tracePath) {
+            fixture.tracePath = tracePath;
+            this.attach(fs.readFileSync(tracePath), 'application/zip');
+        }
     }
 });
 
-async function takeScreenshot(scenarioName: string): Promise<string> {
+AfterAll(async function () {
+    try {
+        await context.close(); 
+        await browser.close();
+        const cleanupScript = path.join(__dirname, '../utils/cleanup.ts');
+    } catch (error) {
+        console.error('Error in AfterAll hook:', error);
+    }
+});
+
+async function takeScreenshot(scenarioName: string): Promise<string | undefined> {
     try {
         const screenshotPath = path.resolve(`./test-results/screenshots/${scenarioName}.png`);
-        await fixture.page.screenshot({ path: screenshotPath, fullPage: true });
+        await fixture.page?.screenshot({ path: screenshotPath, fullPage: true });
         console.log(`Screenshot saved to ${screenshotPath}`);
         return screenshotPath;
     } catch (error) {
         console.error('Error while taking screenshot:', error);
-        return ''; 
+        return undefined;
     }
 }
 
 async function getVideoPath(): Promise<string | undefined> {
     try {
-        const video = fixture.page.video();
+        const video = fixture.page?.video();
         if (video) {
-            await fixture.page.close(); 
+            await fixture.page?.close();
             const videoPath = await video.path();
             console.log(`Video saved to ${videoPath}`);
             return videoPath;
         }
-        return undefined; 
+        return undefined;
     } catch (error) {
         console.error('Error while getting video path:', error);
-        return undefined; 
+        return undefined;
+    }
+}
+
+async function stopAndSaveTrace(scenarioName: string): Promise<string | undefined> {
+    try {
+        const tracePath = path.resolve(`./test-results/traces/${scenarioName}-trace.zip`);
+        await context.tracing.stop({ path: tracePath });
+        console.log(`Trace saved to ${tracePath}`);
+        return tracePath;
+    } catch (error) {
+        console.error('Error while saving trace:', error);
+        return undefined;
     }
 }
