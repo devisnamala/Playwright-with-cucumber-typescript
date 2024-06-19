@@ -35,7 +35,7 @@
 ###
 
 <div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" height="40" alt="go logo"  />
+  <img src="https://www.bing.com/images/search?view=detailV2&ccid=KuuxWAA8&id=00449CEBECCE98432A2676E7087DAC1725C34288&thid=OIP.KuuxWAA8VbSzwOglu0_yoAHaHa&mediaurl=https%3a%2f%2fseleniumwithjavapython.files.wordpress.com%2f2022%2f07%2fplaywright-logo.webp&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.2aebb158003c55b4b3c0e825bb4ff2a0%3frik%3diELDJResfQjndg%26pid%3dImgRaw%26r%3d0&exph=1080&expw=1080&q=playwright+logo&simid=608050387866554363&FORM=IRPRST&ck=B3A9F32C0D850D2F35A48D30ADAF5EA8&selectedIndex=12&itb=0" height="40" alt="go logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" height="40" alt="rust logo"  />
   <img width="12" />
