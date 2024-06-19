@@ -43,7 +43,7 @@ This suite of tests is specifically designed to validate and test features on th
 - **package.json:** Project configuration file for Node.js.
 
 ### Directory "src"
-
+- **api:** Directory containing API-related functionality.
 - **hooks:** Directory with files related to hooks for tests.
   - **fixture.ts:** File with pre-defined test configurations.
   - **hooks.ts:** File with custom hooks for tests.
