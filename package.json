@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "npx ts-node src/utils/init.ts",
-    "test": "cucumber-js --require-module ts-node/register --require src/hooks/hooks.ts --require src/test/steps/*.ts --format json:test-results/cucumber.json",
-    "testtag": "cucumber-js",
+    "test": "cucumber-js",
     "report": "ts-node /Users/siri/Desktop/Humana/src/utils/report.ts && open test-results/reports/index.html",
     "test:record": "npx playwright codegen",
     "htmlreport": "open test-results/reports/cucumber_report.html",
