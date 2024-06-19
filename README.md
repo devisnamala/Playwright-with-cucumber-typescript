@@ -121,7 +121,7 @@ npm run test
 Open report:
 
 ```bash
-start "" "test-results\reports\cucumber_report.html"
+npm open report
 ```
 
 
