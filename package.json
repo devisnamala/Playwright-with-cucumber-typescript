@@ -7,7 +7,6 @@
     "test": "cucumber-js",
     "report": "ts-node /Users/siri/Desktop/Humana/src/utils/report.ts && open test-results/reports/index.html",
     "test:record": "npx playwright codegen",
-    "htmlreport": "open test-results/reports/cucumber_report.html",
     "test:failed": "cucumber-js -p rerun @rerun.txt"
   },
   "keywords": [],
