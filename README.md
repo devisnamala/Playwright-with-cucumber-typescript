@@ -63,7 +63,8 @@ This suite of tests is specifically designed to validate and test features on th
 - **uiActions.ts:** Contains utility functions or classes for performing UI-related actions within the application.
 - **AssertionUtils.ts:** Provides utility functions and methods for performing assertions and validations within API tests or actions.
 
-### Directory "pages" Directory containing Page Object Model classes.
+### Directory "pages"** 
+Directory containing page object model classes
 
 ### Directory "tests"
 
