@@ -3,13 +3,12 @@
 ![Static Badge](https://img.shields.io/badge/Playwright-logo?style=for-the-badge&logo=playwright&logoColor=rgb(214%2C%2083%2C%2072)&labelColor=rgb(46%2C%20173%2C%2051)&color=rgb(22%2C%2027%2C%2034))
 ![Static Badge](https://img.shields.io/badge/Cucumber-logo?style=for-the-badge&logo=cucumber&logoColor=black&labelColor=rgb(35%2C%20217%2C%20108)&color=rgb(22%2C%2027%2C%2034))
 
-This project offers a framework and tools for automated web testing using TypeScript, Playwright, and Cucumber, following Behavior-Driven Development (BDD) best practices and employing the Page Object Model design pattern.
+sample test automation framework developed using Playwright with Cucumber.
 
-## Testing demoblaze.com Features 🧪
+## Testing Features 🧪
 
-This suite of tests is specifically designed to validate and test features on the [demoblaze.com](https://www.demoblaze.com) website. You'll find feature files under the `tests/features` directory related to signup, login and adding products to the cart.
-
-![Typescript2](https://github.com/carlosvagnoni/typescript_playwright_cucumber/assets/106275103/2ea482af-5a3b-4bd4-a56d-00e45d33aa16)
+This suite of tests is specifically designed to validate and test features on the swaglabs(https://www.saucedemo.com/v1/) and formy(https://formy-project.herokuapp.com/form) website. You'll find feature files under the `tests/features` directory related to signup, login and adding products to the cart.
+file:///Users/siri/Desktop/Humana/test-results/recordings/0b970755-be12-4ed9-b453-1f86dcfd0a7c.webm
 
 ## Table of Contents 📑
 - [Requirements](#requirements)
