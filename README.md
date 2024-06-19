@@ -43,42 +43,51 @@ This suite of tests is specifically designed to validate and test features on th
 - **package.json:** Project configuration file for Node.js.
 
 ### Directory "src"
+
 - **api:** Directory containing API-related functionality.
-- **resources:**  Subdirectory containing JSON files or other resources used within the API layer.
-- **utils:** utility functions and constants
+  - **resources:** Subdirectory containing JSON files or other resources used within the API layer.
+
+- **utils:** Directory containing utility functions and constants.
   - **RestRequest.ts:** Functions for making HTTP requests (GET, POST, PUT, DELETE).
   - **RESTResponse.ts:** Manages and processes responses received from RESTful API requests made within the application.
   - **RoutesReq.ts:** Defines and manages routes and endpoints used within the application's API layer.
-  - **RequestHeader.ts:**  related to HTTP request headers used in API interactions.
+  - **RequestHeader.ts:** Utility functions related to HTTP request headers used in API interactions.
+
 - **hooks:** Directory with files related to hooks for tests.
   - **fixture.ts:** File with pre-defined test configurations.
   - **hooks.ts:** File with custom hooks for tests.
-    
---**helpers:**
-    -**Filereader.ts:** Functions for reading various file formats such as JSON, CSV, or text files.
-    -**uiActions.ts:** Contains utility functions or classes for performing UI-related actions within the application.
-    -**AssertionUtils.ts:** Provides utility functions and methods for performing assertions and validations within API tests or actions.
-- **pages:** Directory containing Page Object Model classes.
 
-- **tests:** Directory containing test files and specifications.
-  - **features:** Subdirectory containing specification files in Gherkin format.
-  - **steps:** Directory containing files with steps for the specifications.
+### Directory "helpers"
 
-- **utils:** Directory containing utility functions for tests.
-  - **browsers.ts:** Class responsible for managing different browser instances using Playwright.
-  - **cleanup.ts:** Contains utility functions or scripts for cleaning up resources or performing cleanup tasks.
-  - **log.ts:** Defines the options for logger configuration.
-  - **init.ts:** initializes necessary directories and handles errors using fs-extra for file system operations.
-  - **report.ts:** Generates and formats reports, typically related to test execution results or application metrics.
+- **Filereader.ts:** Functions for reading various file formats such as JSON, CSV, or text files.
+- **uiActions.ts:** Contains utility functions or classes for performing UI-related actions within the application.
+- **AssertionUtils.ts:** Provides utility functions and methods for performing assertions and validations within API tests or actions.
 
--**.env:** Configuration file used to store environment variables for application.
+### Directory "pages"
 
--**test-results:** Directory used to store overall test results, reports, and related artifacts.
-  - **screenshot:** Directory for storing screenshots and attach them to an cucumber html report.
-  - **logs:** -Directory for storing logs related to test executions or application events.
-  - **reports:**- Directory specifically for storing generated reports from test automation or execution.
-  - **recordings:**- Directory dedicated to storing recorded sessions or interactions, often used in UI or performance testing.
-  - **traces:**- Directory containing debug or trace logs.
+### Directory "tests"
+
+- **features:** Subdirectory containing specification files in Gherkin format.
+- **steps:** Directory containing files with steps for the specifications.
+
+### Directory "utils"
+
+- **browsers.ts:** Class responsible for managing different browser instances using Playwright.
+- **cleanup.ts:** Contains utility functions or scripts for cleaning up resources or performing cleanup tasks.
+- **log.ts:** Defines the options for logger configuration.
+- **init.ts:** Initializes necessary directories and handles errors using `fs-extra` for file system operations.
+- **report.ts:** Generates and formats reports, typically related to test execution results or application metrics.
+
+- **.env:** Configuration file used to store environment variables for application.
+
+### Directory "test-results"
+
+- **screenshots:** Directory for storing screenshots and attach them to a cucumber HTML report.
+- **logs:** Directory for storing logs related to test executions or application events.
+- **reports:** Directory specifically for storing generated reports from test automation or execution.
+- **recordings:** Directory dedicated to storing recorded sessions or interactions, often used in UI or performance testing.
+- **traces:** Directory containing debug or trace logs.
+
 
 ## <a id="installation">Installation 🛠️</a>
 
