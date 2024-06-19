@@ -8,7 +8,7 @@ sample test automation framework developed using Playwright with Cucumber.
 ## Testing Features 🧪
 
 This suite of tests is specifically designed to validate and test features on the swaglabs(https://www.saucedemo.com/v1/) and formy(https://formy-project.herokuapp.com/form) website. You'll find feature files under the `tests/features` directory related to signup, login and adding products to the cart.
-file:///Users/siri/Desktop/Humana/test-results/recordings/0b970755-be12-4ed9-b453-1f86dcfd0a7c.webm
+
 
 ## Table of Contents 📑
 - [Requirements](#requirements)
@@ -20,19 +20,26 @@ file:///Users/siri/Desktop/Humana/test-results/recordings/0b970755-be12-4ed9-b45
 
 ## <a id="requirements">Requirements 📋</a>
 
-- Node.js 21.2.0
-- @cucumber/cucumber: 10.0.1
-- @playwright/test: 1.40.0
-- @types/node: 20.9.2
-- ts-node: 10.9.1
-- winston: 3.11.0
+-**Node.js**: 21.2.0
+-**@cucumber/cucumber:** ^10.8.0
+-@playwright/test: ^1.44.1
+-@types/jsonpath: ^0.2.4
+-@types/node: ^20.14.2
+-cucumber-html-reporter: ^7.1.1
+-ts-node: ^10.9.2
+-ajv: ^8.16.0
+-dotenv: ^16.4.5
+-fs-extra: ^11.2.0
+-jsonpath: ^1.1.1
+-jsonpath-plus: ^9.0.0
+-multiple-cucumber-html-reporter: ^3.6.2
+-winston: ^3.13.0
 
 ## <a id="folder-structure">Folder Structure 📂</a>
 
 - **cucumber.json:** Configuration or generated output by Cucumber.
 - **package-lock.json:** Specific details about exact dependency versions for the project.
 - **package.json:** Project configuration file for Node.js.
-- **run.bat:** Script specifically designed for execution in Windows environments.
 
 ### Directory "src"
 
