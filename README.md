@@ -124,13 +124,5 @@ Open report:
 start "" "test-results\reports\cucumber_report.html"
 ```
 
-**NOTE:**
 
-- Set up the respective environment variables beforehand.
-- On Windows environments, you can directly execute the `run.bat` file.
 
-## <a id="contact">Contact 📧</a>
-
-If you have any questions or suggestions, feel free to contact me through my social media accounts.
-
-Thank you for your interest in this project!
