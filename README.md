@@ -16,7 +16,7 @@ This suite of tests is specifically designed to validate and test features on th
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Test Execution](#test-execution)
-- [Contact](#contact)
+
 
 ### <a id="requirements">Requirements 📋</a>
 
@@ -95,8 +95,7 @@ Directory containing page object model classes
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/carlosvagnoni/typescript_playwright_cucumber.git
-    cd typescript_playwright_cucumber
+    git clone https://github.com/devisnamala/Playwright-with-cucumber-typescript.git
     ```
 
 2. Install dependencies:
