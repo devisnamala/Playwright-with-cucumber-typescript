@@ -18,22 +18,23 @@ This suite of tests is specifically designed to validate and test features on th
 - [Test Execution](#test-execution)
 - [Contact](#contact)
 
-## <a id="requirements">Requirements 📋</a>
+### <a id="requirements">Requirements 📋</a>
 
--**Node.js**: 21.2.0
--**@cucumber/cucumber:** ^10.8.0
--@playwright/test: ^1.44.1
--@types/jsonpath: ^0.2.4
--@types/node: ^20.14.2
--cucumber-html-reporter: ^7.1.1
--ts-node: ^10.9.2
--ajv: ^8.16.0
--dotenv: ^16.4.5
--fs-extra: ^11.2.0
--jsonpath: ^1.1.1
--jsonpath-plus: ^9.0.0
--multiple-cucumber-html-reporter: ^3.6.2
--winston: ^3.13.0
+- Node.js 21.2.0
+- @cucumber/cucumber: ^10.8.0
+- @playwright/test: ^1.44.1
+- @types/jsonpath: ^0.2.4
+- @types/node: ^20.14.2
+- cucumber-html-reporter: ^7.1.1
+- ts-node: ^10.9.2
+- ajv: ^8.16.0
+- dotenv: ^16.4.5
+- fs-extra: ^11.2.0
+- jsonpath: ^1.1.1
+- jsonpath-plus: ^9.0.0
+- multiple-cucumber-html-reporter: ^3.6.2
+- tsc: ^2.0.4
+- winston: ^3.13.0
 
 ## <a id="folder-structure">Folder Structure 📂</a>
 
