@@ -1,67 +1,99 @@
-<div align="center">
-  <img height="150" src="https://camo.githubusercontent.com/62da68eb62b1e5f175f7d1f0191dd89a653d7908feb22d37d4a0ab07365d6791/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f4d3967624264396e6244724f5475314d71782f67697068792e676966"  />
-</div>
+# Automated Web Testing with TypeScript, Playwright, and Cucumber
+![Static Badge](https://img.shields.io/badge/TypeScript-logo?style=for-the-badge&logo=typescript&logoColor=white&labelColor=rgb(49%2C%20120%2C%20198)&color=rgb(22%2C%2027%2C%2034))
+![Static Badge](https://img.shields.io/badge/Playwright-logo?style=for-the-badge&logo=playwright&logoColor=rgb(214%2C%2083%2C%2072)&labelColor=rgb(46%2C%20173%2C%2051)&color=rgb(22%2C%2027%2C%2034))
+![Static Badge](https://img.shields.io/badge/Cucumber-logo?style=for-the-badge&logo=cucumber&logoColor=black&labelColor=rgb(35%2C%20217%2C%20108)&color=rgb(22%2C%2027%2C%2034))
 
-###
+This project offers a framework and tools for automated web testing using TypeScript, Playwright, and Cucumber, following Behavior-Driven Development (BDD) best practices and employing the Page Object Model design pattern.
 
-<div align="center">
-  <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
-  <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="youtube logo"  />
-  <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="twitter logo"  />
-</div>
+## Testing demoblaze.com Features 🧪
 
-###
+This suite of tests is specifically designed to validate and test features on the [demoblaze.com](https://www.demoblaze.com) website. You'll find feature files under the `tests/features` directory related to signup, login and adding products to the cart.
 
-<div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=maurodesouza.maurodesouza&"  />
-</div>
+![Typescript2](https://github.com/carlosvagnoni/typescript_playwright_cucumber/assets/106275103/2ea482af-5a3b-4bd4-a56d-00e45d33aa16)
 
-###
+## Table of Contents 📑
+- [Requirements](#requirements)
+- [Folder Structure](#folder-structure)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Test Execution](#test-execution)
+- [Contact](#contact)
 
-<h1 align="center">hey there 👋</h1>
+## <a id="requirements">Requirements 📋</a>
 
-###
+- Node.js 21.2.0
+- @cucumber/cucumber: 10.0.1
+- @playwright/test: 1.40.0
+- @types/node: 20.9.2
+- ts-node: 10.9.1
+- winston: 3.11.0
 
-<h3 align="left">👩‍💻  About Me</h3>
+## <a id="folder-structure">Folder Structure 📂</a>
 
-###
+- **cucumber.json:** Configuration or generated output by Cucumber.
+- **package-lock.json:** Specific details about exact dependency versions for the project.
+- **package.json:** Project configuration file for Node.js.
+- **run.bat:** Script specifically designed for execution in Windows environments.
 
-<p align="left">I'm ... from ....<br><br>- 🔭 I’m working as ...<br>- 📚 I'm currently learning ...<br>- ⚡ In my free time I ...</p>
+### Directory "src"
 
-###
+- **hooks:** Directory with files related to hooks for tests.
+  - **fixture.ts:** File with pre-defined test configurations.
+  - **hooks.ts:** File with custom hooks for tests.
 
-<h3 align="left">🛠 Language and tools</h3>
+- **pages:** Directory containing Page Object Model classes.
 
-###
+- **tests:** Directory containing test files and specifications.
+  - **features:** Subdirectory containing specification files in Gherkin format.
+  - **steps:** Directory containing files with steps for the specifications.
 
-<div align="left">
-  <img src="https://www.bing.com/images/search?view=detailV2&ccid=KuuxWAA8&id=00449CEBECCE98432A2676E7087DAC1725C34288&thid=OIP.KuuxWAA8VbSzwOglu0_yoAHaHa&mediaurl=https%3a%2f%2fseleniumwithjavapython.files.wordpress.com%2f2022%2f07%2fplaywright-logo.webp&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.2aebb158003c55b4b3c0e825bb4ff2a0%3frik%3diELDJResfQjndg%26pid%3dImgRaw%26r%3d0&exph=1080&expw=1080&q=playwright+logo&simid=608050387866554363&FORM=IRPRST&ck=B3A9F32C0D850D2F35A48D30ADAF5EA8&selectedIndex=12&itb=0" height="40" alt="go logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" height="40" alt="rust logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain-wordmark.svg" height="40" alt="ruby logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-plain-wordmark.svg" height="40" alt="dot-net logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg" height="40" alt="firebase logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" height="40" alt="amazonwebservices logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/circleci/circleci-plain.svg" height="40" alt="circleci logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="40" alt="kubernetes logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg" height="40" alt="docker logo"  />
-</div>
+- **utils:** Directory containing utility functions for tests.
+  - **browsers.ts:** Class responsible for managing different browser instances using Playwright.
+  - **logger.ts:** Defines the options for logger configuration.
+  - **pageObject.ts:** Class acting as a wrapper for Playwright actions.
+  - **screenshot.ts:** Function for taking screenshots and attach them to an cucumber html report.
 
-###
+## <a id="installation">Installation 🛠️</a>
 
-<h3 align="left">🔥   My Stats :</h3>
+1. Clone this repository:
 
-###
+    ```bash
+    git clone https://github.com/carlosvagnoni/typescript_playwright_cucumber.git
+    cd typescript_playwright_cucumber
+    ```
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=maurodesouza&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5&order=3" height="220" alt="streak graph"  />
-</div>
+2. Install dependencies:
 
-###
+    ```bash
+    npm install
+    ```
+
+## <a id="configuration">Configuration ⚙️</a>
+
+- Make sure you have a browser installed and configured in the script (Chrome, Firefox, or Safari).
+- You can configure the fixture.ts file to adjust parameters such as the base URL(url) and browser.
+
+## <a id="test-execution">Test Execution ▶️</a>
+
+Run all the tests:
+
+```bash
+npm run test
+```
+
+Open report:
+
+```bash
+start "" "test-results\reports\cucumber_report.html"
+```
+
+**NOTE:**
+
+- Set up the respective environment variables beforehand.
+- On Windows environments, you can directly execute the `run.bat` file.
+
+## <a id="contact">Contact 📧</a>
+
+If you have any questions or suggestions, feel free to contact me through my social media accounts.
+
+Thank you for your interest in this project!
