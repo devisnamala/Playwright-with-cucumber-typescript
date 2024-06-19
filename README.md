@@ -44,6 +44,12 @@ This suite of tests is specifically designed to validate and test features on th
 
 ### Directory "src"
 - **api:** Directory containing API-related functionality.
+- **resources:**  Subdirectory containing JSON files or other resources used within the API layer.
+  - **utils:** utility functions and constants related to HTTP request headers used in API interactions.
+    - **RestRequest.ts:**
+    - **RESTResponse.ts:**
+    - **RoutesReq.ts:**
+    - **RequestHeader.ts:**
 - **hooks:** Directory with files related to hooks for tests.
   - **fixture.ts:** File with pre-defined test configurations.
   - **hooks.ts:** File with custom hooks for tests.
